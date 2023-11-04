@@ -4,7 +4,7 @@
  *             - access dom elements
  *             - forwardRef
  */
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, forwardRef } from 'react';
 import './Hook.css';
 
 const Count = ({ action, message }) => {
@@ -16,6 +16,12 @@ const Count = ({ action, message }) => {
     </div>
   );
 };
+
+const Input = forwardRef((_, ref) => {
+  return (
+    <input ref={ref} type="number" name="input focus" placeholder="Input Focus" className="text" />
+  );
+});
 
 const HooksUseRef = () => {
   const [count, setCount] = useState(0);
@@ -42,13 +48,7 @@ const HooksUseRef = () => {
       <br />
       <Count action={handleButtonLoger} message={`button clicked: ${buttonLogger.current}`} />
       <br />
-      <input
-        ref={inputRef}
-        type="number"
-        name="input focus"
-        placeholder="input focus"
-        className="text"
-      ></input>
+      <Input ref={inputRef} />
     </>
   );
 };
