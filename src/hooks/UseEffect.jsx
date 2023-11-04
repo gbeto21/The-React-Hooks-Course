@@ -23,11 +23,12 @@ const HooksUseEffect = () => {
   //       - include dependencies and clean up
   useEffect(()=>{
     console.log("useEffect.");
+    console.log(`Current count: ${count}`);
 
     return () => {
       console.log("Clean up effect.");
     }
-  }, [])
+  }, [count])
 
   const handleCount = () => {
     setCount((prevState) => prevState + 1);
