@@ -27,7 +27,7 @@ const HooksUseEffect = () => {
     return () => {
       console.log("Clean up effect.");
     }
-  })
+  }, [])
 
   const handleCount = () => {
     setCount((prevState) => prevState + 1);
