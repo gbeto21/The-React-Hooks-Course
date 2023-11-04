@@ -3,7 +3,7 @@
  *             - include dependencies
  *             - include clean up
  */
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import './Hook.css';
 
 const Count = ({ count, handleCount }) => {
@@ -21,14 +21,14 @@ const HooksUseEffect = () => {
 
   // TODO: Use useEffect hook to simulate how the hook works
   //       - include dependencies and clean up
-  useEffect(()=>{
-    console.log("useEffect.");
+  useEffect(() => {
+    console.log('useEffect.');
     console.log(`Current count: ${count}`);
 
     return () => {
-      console.log("Clean up effect.");
-    }
-  }, [count])
+      console.log('Clean up effect.');
+    };
+  }, [count]);
 
   const handleCount = () => {
     setCount((prevState) => prevState + 1);
