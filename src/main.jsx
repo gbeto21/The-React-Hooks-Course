@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import HooksUseContext from './hooks/UseContext.jsx';
-import { CounterProvider } from './hooks/CounterContext.jsx';
+import HooksUseReducer from './hooks/UseReducer.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CounterProvider>
-      <HooksUseContext />
-    </CounterProvider>
+    <HooksUseReducer />
   </React.StrictMode>
 );
