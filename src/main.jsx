@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import HooksUseReducer from './hooks/UseReducer.jsx';
+import HooksUseCallback1 from './hooks/UseCallback1.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HooksUseReducer />
+    <HooksUseCallback1 />
   </React.StrictMode>
 );
