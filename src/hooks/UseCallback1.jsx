@@ -22,7 +22,7 @@ const HooksUseCallback1 = () => {
     setDec(dec - 1);
   }, [dec]);
 
-  console.log("HooksRendered");
+  console.log('HooksRendered');
   setFunc.add(increment);
   setFunc.add(decrement);
   console.log(setFunc);
